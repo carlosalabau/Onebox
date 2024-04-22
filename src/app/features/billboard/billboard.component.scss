@@ -1,0 +1,27 @@
+
+
+main{
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    justify-content: center;
+    ::ng-deep .p-card-content{
+        height: 150px;
+    }
+   .date, .place{
+        margin: 1.25rem
+    }
+    .card{
+        margin: 5px;
+    }
+}
+
+@media only screen and (max-width: 500px) { 
+    main{
+        grid-template-columns: 1fr;
+        ::ng-deep .p-card-content{
+            display: none;
+        }
+    }
+}

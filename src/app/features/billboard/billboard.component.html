@@ -1,0 +1,18 @@
+
+<main>
+    @for(event of events; track event.id){
+        <div class="card">
+            <p-card [header]="event.title" [subheader]="event.subtitle" [style]="{ width: '450px'}">
+                <ng-template pTemplate="header">
+                    <img alt="Card" [src]="event.image" />
+                    <p class="date">{{convertDate(event.startDate)}} - {{convertDate(event.endDate)}}</p>
+                    <p class="place"><i class="pi pi-map"></i> {{event.place}}</p>
+                </ng-template>
+                <p [innerHTML]="event.description"></p>
+                <ng-template pTemplate="footer">
+                    <p-button label="Comprar" icon="pi pi-check"></p-button>
+                </ng-template>
+            </p-card>
+        </div>
+    }
+</main>
