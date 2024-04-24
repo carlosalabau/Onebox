@@ -23,9 +23,6 @@ export class BillboardComponent implements OnInit {
   }
 
   redirectEvent(id: string) {
-    this.billboardService.getEvent(id).subscribe((evt) => {
-      this.billboardService.event.next(evt);
-      this.router.navigateByUrl(`event/${id}`);
-    });
+    this.router.navigateByUrl(`event/${id}`);
   }
 }

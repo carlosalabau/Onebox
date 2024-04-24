@@ -1,5 +1,10 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {
+  RouterModule,
+  Routes,
+  provideRouter,
+  withComponentInputBinding,
+} from '@angular/router';
 import { BillboardComponent } from './features/billboard/billboard.component';
 import { EventTicketComponent } from './features/event-ticket/event-ticket.component';
 
@@ -18,5 +23,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
+  providers: [provideRouter(routes, withComponentInputBinding())],
 })
 export class AppRoutingModule {}

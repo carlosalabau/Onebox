@@ -10,13 +10,14 @@ import { ButtonModule } from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EventTicketComponent } from './features/event-ticket/event-ticket.component';
 import { DatePipe } from './shared/pipes/date.pipe';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
     AppComponent,
     BillboardComponent,
     EventTicketComponent,
-    DatePipe
+    DatePipe,
   ],
   imports: [
     BrowserModule,
@@ -24,9 +25,10 @@ import { DatePipe } from './shared/pipes/date.pipe';
     HttpClientModule,
     CardModule,
     BrowserAnimationsModule,
-    ButtonModule
+    ButtonModule,
+    TableModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
