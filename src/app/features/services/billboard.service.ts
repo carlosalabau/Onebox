@@ -23,4 +23,6 @@ export class BillboardService {
   getEvent(id: string) {
     return this.httpClient.get(`../../../assets/data/event-info-${id}.json`);
   }
+
+  addCart() {}
 }
