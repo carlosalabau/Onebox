@@ -1,0 +1,17 @@
+<p>event-ticket works!</p>
+@if(session){
+
+<h1>{{session.event.title}}</h1>
+@for(evt of session.sessions; track session.event.id){
+<div class="sessions">
+  <div class="date">
+    {{evt.date | date }}
+  </div>
+  <div class="disp">
+    {{evt.availability}}
+  </div>
+</div>
+}
+}@else{
+<p>No existe evento</p>
+}
