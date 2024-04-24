@@ -10,9 +10,14 @@
                 </ng-template>
                 <p [innerHTML]="event.description"></p>
                 <ng-template pTemplate="footer">
-                    <p-button label="Comprar" icon="pi pi-check"></p-button>
+                    <p-button label="Comprar" icon="pi pi-check" (onClick)="openEvent(event)"></p-button>
                 </ng-template>
             </p-card>
         </div>
     }
 </main>
+
+<div class="prueba">
+    Esto es una prueba;
+    <p>{{(evento$ | async) | json}}</p>
+</div>

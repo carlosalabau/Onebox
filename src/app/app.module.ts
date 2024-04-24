@@ -8,6 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StoreModule } from '@ngrx/store';
+import { EventReducer } from './core/store/reducer';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     CardModule,
     BrowserAnimationsModule,
-    ButtonModule
+    ButtonModule,
+    StoreModule.forRoot({ event: EventReducer })
   ],
   providers: [],
   bootstrap: [AppComponent]
