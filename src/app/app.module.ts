@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EventTicketComponent } from './features/event-ticket/event-ticket.component';
 import { DatePipe } from './shared/pipes/date.pipe';
 import { TableModule } from 'primeng/table';
+import { HeaderComponent } from './features/header/header.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { TableModule } from 'primeng/table';
     BillboardComponent,
     EventTicketComponent,
     DatePipe,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

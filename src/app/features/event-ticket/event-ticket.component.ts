@@ -31,9 +31,8 @@ export class EventTicketComponent implements OnInit {
   }
 
   manageItemCart(id: string, date: Date, type: string) {
-    console.log(id, date, type);
     this.session.sessions.map((evt: any) => {
-      if (evt.id == id && evt.date == date) {
+      if (evt.id == id && evt.date == date && evt.tickets >= 0) {
         type == 'add' ? evt.tickets++ : evt.tickets--;
       }
       return evt;

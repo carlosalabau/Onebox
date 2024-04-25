@@ -1,26 +1,32 @@
-<i class="pi pi-arrow-circle-left" style="font-size: 2rem" [routerLink]="['/']"></i>
-@if(session){
-<h1>{{session.event.title}}</h1>
-<p-table [value]="session.sessions" [tableStyle]="{ 'min-width': '50rem' }">
-  <ng-template pTemplate="header">
-    <tr>
-      <th>Fecha</th>
-      <th>Disponibilidad</th>
-      <th>Entradas</th>
-    </tr>
-  </ng-template>
-  <ng-template pTemplate="body" let-item>
-    <tr>
-      <td>{{ item.date | date }}</td>
-      <td>{{ item.availability }}</td>
-      <td class="tickets">
-        <i class="pi pi-minus-circle" (click)="manageItemCart(session.event.id, item.date, 'minus')"></i>
-        <b> {{item.tickets || 0}}</b>
-        <i class="pi pi-plus-circle" (click)="manageItemCart(session.event.id, item.date, 'add')"></i>
-      </td>
-    </tr>
-  </ng-template>
-</p-table>
-}@else{
-<p>No existe evento</p>
-}
+<main>
+
+  @if(session){
+  <h1>{{session.event.title}}</h1>
+  <p-table [value]="session.sessions" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Fecha</th>
+        <th>Disponibilidad</th>
+        <th>Entradas</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-item>
+      <tr>
+        <td>{{ item.date | date }}</td>
+        <td>{{ item.availability }}</td>
+        <td class="tickets">
+          <i class="pi pi-minus-circle" (click)="manageItemCart(session.event.id, item.date, 'minus')"></i>
+          <b> {{item.tickets || 0}}</b>
+          <i class="pi pi-plus-circle" (click)="manageItemCart(session.event.id, item.date, 'add')"></i>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+  }@else{
+  <p>No existe evento</p>
+  }
+  <div class="buttons">
+    <p-button label="Volver" size="small" severity="help" icon="pi pi-arrow-circle-left"
+      [routerLink]="['/']"></p-button>
+  </div>
+</main>
