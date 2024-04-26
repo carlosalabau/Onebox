@@ -12,6 +12,7 @@ import { EventTicketComponent } from './features/event-ticket/event-ticket.compo
 import { DatePipe } from './shared/pipes/date.pipe';
 import { TableModule } from 'primeng/table';
 import { HeaderComponent } from './features/header/header.component';
+import { CartComponent } from './features/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { HeaderComponent } from './features/header/header.component';
     EventTicketComponent,
     DatePipe,
     HeaderComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

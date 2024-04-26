@@ -7,6 +7,7 @@ import {
 } from '@angular/router';
 import { BillboardComponent } from './features/billboard/billboard.component';
 import { EventTicketComponent } from './features/event-ticket/event-ticket.component';
+import { CartComponent } from './features/cart/cart.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'event/:id',
     component: EventTicketComponent,
+  },
+  {
+    path: 'cart',
+    component: CartComponent,
   },
 ];
 

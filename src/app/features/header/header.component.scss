@@ -1,8 +1,19 @@
 main {
-  background-color: rgba(246, 246, 246, 0.766);
+  background-color: rgba(0, 0, 0, 0.766);
   position: absolute;
   top: 0;
   right: 0;
   width: 100%;
-  height: 45px;
+  height: 50px;
+
+  .icons {
+    display: flex;
+    justify-content: flex-end;
+    margin: 15px 5% 0 0;
+    i {
+      color: white;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+  }
 }

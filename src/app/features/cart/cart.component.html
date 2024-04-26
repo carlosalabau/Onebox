@@ -1,0 +1,26 @@
+<main>
+  <div class="buttons">
+    <p-button label="Volver" size="small" severity="help" icon="pi pi-arrow-circle-left"
+      [routerLink]="['/']"></p-button>
+  </div>
+  @if(events.length > 0){
+
+  @for(event of events; track event.title){
+  <h1>{{event.title}}</h1>
+  @for(evt of event.events; track evt.id){
+  <div class="events">
+    <div class="date">
+      {{evt.date | date}}
+    </div>
+    <div class="tickets">
+      x{{evt.tickets}}
+      <img src="../../../assets/img/trash.png" (click)="removeItem(evt)" />
+    </div>
+
+  </div>
+  }
+  }
+  } @else {
+  Todavia no hay elementos en el carrito de compra
+  }
+</main>

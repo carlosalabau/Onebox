@@ -1,9 +1,12 @@
-.tickets {
+.events {
   display: flex;
-  width: 120px;
   justify-content: space-between;
-  i {
-    cursor: pointer;
+  width: 150px;
+  .tickets {
+    img {
+      width: 15px;
+      cursor: pointer;
+    }
   }
 }
 
